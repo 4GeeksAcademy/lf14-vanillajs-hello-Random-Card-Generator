@@ -23,6 +23,12 @@ window.onload = function() {
     return array[Math.floor(Math.random() * array.length)];
   }
 
+  function setCardStyles(width, height) {
+    const card = document.querySelector(".card");
+    card.style.width = width ? width + "rem" : "18rem";
+    card.style.height = height ? height + "rem" : "25rem";
+  }
+
   function generarCarta() {
     const randomPalo = seleccionarAleatorio(paloCarta);
     const randomNumero = seleccionarAleatorio(numeroCarta);
@@ -35,10 +41,16 @@ window.onload = function() {
       <div class="paloAbajo" style="color: ${colorPalo};">${randomPalo}</div>
     `;
 
+    const widthInput = document.getElementById("width");
+    const heightInput = document.getElementById("height");
+
+    setCardStyles(widthInput.value, heightInput.value);
+
     document.querySelector(".card-body").innerHTML = cartaAleatoria;
     const generarButton = document.getElementById("generar");
     generarButton.addEventListener("click", generarCarta);
   }
+
   generarCarta();
   setInterval(generarCarta, 10000);
 };

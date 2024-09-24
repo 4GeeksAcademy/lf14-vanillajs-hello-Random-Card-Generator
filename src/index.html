@@ -32,21 +32,39 @@
             style="width: 18rem; height: 25rem; background-color: white; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);"
           >
             <div class="card-body text-dark">
-              <div class="card-image"></div>
-              <div class="card-title">
-                <!-- Aquí irá el título de la carta -->
-              </div>
-              <div class="card-text">
-                <!-- Aquí irá el texto de la carta -->
-              </div>
+              <div class="paloArriba"></div>
+              <div class="numeroCarta"></div>
+              <div class="paloAbajo"></div>
             </div>
           </div>
         </div>
       </div>
-      <div class="d-flex justify-content-center p-3">
-        <button id="generar" type="button" class="btn btn-secondary p-2">
-          Generar nueva carta
-        </button>
+      <div class="container d-flex justify-content-center p-6">
+        <div class="row">
+          <div class="col-md-8">
+            <div class="form-group">
+              <label for="width">Ancho (rem):</label>
+              <input
+                type="number"
+                id="width"
+                name="width"
+                style="width: 50px;"
+              />
+              <label for="height">Alto (rem):</label>
+              <input
+                type="number"
+                id="height"
+                name="height"
+                style="width: 50px;"
+              />
+            </div>
+            <div class="d-flex justify-content-center align-items-center p-3">
+              <button id="generar" type="button" class="btn btn-secondary p-2">
+                Generar nueva carta
+              </button>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </body>
